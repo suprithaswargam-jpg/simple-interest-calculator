@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Simple Interest Calculator</title>
+<style>
+body{font-family:Arial;text-align:center;background:#ffe6f0;padding:30px}
+.box{background:white;padding:25px;border-radius:15px;width:300px;margin:auto}
+input{width:90%;padding:10px;margin:8px;border-radius:8px;border:1px solid #ccc}
+button{background:#ff4d88;color:white;border:none;padding:12px;width:100%;border-radius:8px;font-size:16px}
+h2{color:#ff4d88}
+</style>
+</head>
+<body>
+<div class="box">
+<h2>Simple Interest Calculator</h2>
+<input type="number" id="p" placeholder="Principal Amount">
+<input type="number" id="r" placeholder="Rate %">
+<input type="number" id="t" placeholder="Time (Years)">
+<button onclick="calc()">Calculate</button>
+<h3 id="result"></h3>
+</div>
+<script>
+function calc(){
+let p=document.getElementById("p").value;
+let r=document.getElementById("r").value;
+let t=document.getElementById("t").value;
+let si=(p*r*t)/100;
+document.getElementById("result").innerText="Interest: ₹"+si+" | Total: ₹"+(Number(p)+si);
+}
+</script>
+</body>
+</html>
